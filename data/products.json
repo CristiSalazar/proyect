@@ -1,0 +1,46 @@
+[
+    {
+      "id": 1,
+      "category": "libros",
+      "model": "Tapa dura",
+      "image": "https://i.pinimg.com/736x/37/c8/9b/37c89b4a1f4a3103fa71ccf214a0a1e3.jpg",
+      "price": 30000
+    },
+    {
+      "id": 2,
+      "category": "varitas",
+      "model": "roble",
+      "image": "data:image/jpeg;base64,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",
+      "price": 50000
+    },
+    {
+      "id": 3,
+      "category": "varitas",
+      "model": "plástico",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-GjN8x2z0FdMqcuPZTmwpKN07xka_wNtNfw&s",
+      "price": 25000
+    },
+    {
+      "id": 4,
+      "category": "llaveros",
+      "model": "simples",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_957237-MLC54182908828_032023-O.webp",
+      "price": 5000
+    },
+  
+    {"id": 5,
+      "category": "libros",
+      "model": "tapa blanda",
+      "image": "https://www.laguiadelvaron.com/wp-content/uploads/2016/02/Cover-Ahora-tus-viejos-libros-de-Harry-Potter-%C2%A1valen-miles-de-d%C3%B3lares.jpg",
+      "price": 20000
+    },
+    {
+      "id": 6,
+      "category": "tazas",
+      "model": "cerámica",
+      "image": "https://shakrisstore.cl/wp-content/uploads/2024/06/IMG_4706.webp",
+      "price": 10000
+    }
+    
+    
+  ]

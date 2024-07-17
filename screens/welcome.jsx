@@ -1,47 +1,47 @@
-import { Image, Pressable, StyleSheet, Text, View } from 'react-native';
-import { SafeAreaView} from 'react-native-safe-area-context';
+import { SafeAreaView } from 'react-native-safe-area-context'
+import { Alert, Image, Pressable, StyleSheet, Text, View } from 'react-native'
+import { Button } from '../components/button'
+import { theme } from '../configs/theme'
+import { useNavigation } from '@react-navigation/native'
+import { ROUTE } from '../navigation/routes'
 
 export const Welcome = () => {
-    return(
-    <SafeAreaView style={styles.safeArea}>
-      <Image source={require('../assets/Welcome/1.png')}/>
-      <View style={styles.texts}>
-       <Text style={styles.title}>Harry Potter</Text>
-       <Text style={styles.body}>Todo tipo de artículos</Text>
-      </View>
-      <Pressable>
-        <Text style={styles.button}>
-          Más información
-        </Text>
-      </Pressable>
+  const { navigate } = useNavigation()
 
-    </SafeAreaView>     
-)}
+  const handlePress = () => navigate(ROUTE.HOME)
+
+  return (
+    <SafeAreaView style={styles.safeArea}>
+      
+      <View style={styles.texts}>
+        <Text style={styles.title}>Harry Potter</Text>
+        <Text style={styles.text}>Artículos de la mejor saga de la historia</Text>
+      </View>
+      <Button onPress={handlePress}>Ingresar</Button>
+    </SafeAreaView>
+  )
+}
 
 const styles = StyleSheet.create({
-    safeArea: {
-      backgroundColor: '#fff',
-      flex:1,
-      padding:16,
-      alignItems: "center",
-      justifyContent: "center",
-      gap: 32,
-    },
-    texts: {
-      alignItems: "center",
-      gap:8
-    },
-    title:{
-      fontSize: 60,
-      fontWeight: "bold",
-    },
-    body:{
-      fontSize: 20
-    },
-    button:{
-      backgroundColor: "skyblue",
-      borderRadius: 8,
-      padding: 16
-    }
-});
-  
+  safeArea: {
+    alignItems: 'center',
+    backgroundColor: theme.colors.white,
+    flex: 1,
+    gap: 32,
+    justifyContent: 'center',
+    padding: 16,
+  },
+  texts: {
+    alignItems: 'center',
+    gap: 4,
+  },
+  title: {
+    fontSize: 64,
+    fontWeight: 'regular',
+  },
+  text: {
+    color: theme.colors.gray[500],
+    fontSize: 16,
+  },
+})
+
