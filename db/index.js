@@ -3,7 +3,7 @@ import * as SQLite from 'expo-sqlite'
 let db = null
 
 export const init = async () => {
-  db = await SQLite.openDatabaseAsync('.sessionsdb')
+  db = await SQLite.openDatabaseAsync('sessions.db')
   await db.execAsync(
     'CREATE TABLE IF NOT EXISTS sessions (localId TEXT PRIMARY KEY NOT NULL, email TEXT NOT NULL, token TEXT NOT NULL)'
   )

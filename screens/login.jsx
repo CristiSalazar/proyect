@@ -22,15 +22,25 @@ export const Login = () => {
 
   const handleLogin = async () => {
     try {
-      setIsLoading(true)
-      await triggerLogin({ email, password })
+      setIsLoading(true);
+      const response = await triggerLogin({ email, password });
+      console.log('Login Response:', response); // Imprime la respuesta de la API
+  
+      // Verifica si hay un error en la respuesta
+      if (response.error) {
+        console.error('API Error:', response.error);
+        Alert.alert('Error', 'Correo o contraseña incorrectos');
+        return; // Sale de la función si hay un error
+      }
+      
+      // Si la respuesta es exitosa, maneja los datos aquí
     } catch (error) {
-      console.error('Error:', error)
-      Alert.alert('Error', 'Correo o contraseña incorrectos')
+      console.error('Error:', error);
+      Alert.alert('Error', 'Correo o contraseña incorrectos');
     } finally {
-      setIsLoading(false)
+      setIsLoading(false);
     }
-  }
+  };
 
   const goToSignUp = () => navigate(ROUTE.SIGN_UP)
 
