@@ -1,3 +1,4 @@
+Nota importante: el código está en la rama master
 Aplicación móvil desarrollada en React Native para gestionar un sistema de comercio electrónico de una tienda de artículos de Harry Potter. 
 Funcionalidades:
 - Autenticación
